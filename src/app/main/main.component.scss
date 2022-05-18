@@ -1,0 +1,20 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .leader {
+    width: 25%;
+    background-color: #eae6e6;
+    display: flex;
+    justify-content: center;
+    padding: 0 0.5rem 1rem;
+  }
+  .info-project {
+    width: 50%;
+    background-color: #fff;
+  }
+  .list-member {
+    width: 25%;
+    background-color: #eae6e6;
+  }
+}
