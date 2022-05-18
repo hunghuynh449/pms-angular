@@ -1,0 +1,38 @@
+.main_container {
+  padding: 0rem 1rem;
+  height: 100%;
+  width: 100%;
+  .btn_find {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    select {
+      width: 100px;
+      cursor: pointer;
+      border: 2px solid rgb(34, 14, 137);
+    }
+  }
+  .row_table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(129, 127, 127, 0.4);
+    height: 100%;
+    width: 100%;
+    margin: 1rem 0rem;
+    .title_table {
+      width: 100%;
+      background-color: rgb(48, 41, 145);
+      text-align: center;
+      padding: 0.5rem;
+      color: #fff;
+      border-radius: 3px;
+    }
+    .table1 {
+      width: 100%;
+      margin: 1rem 0rem;
+      padding: 1rem;
+    }
+  }
+}
