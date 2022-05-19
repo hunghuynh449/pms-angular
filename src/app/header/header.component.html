@@ -22,8 +22,77 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Giới thiệu</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dự án</a>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dự án
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/duanThem"
+                >Thêm dự án</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/duanList"
+                >Danh sách dự án</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Task
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/taskThem"
+                >Thêm task</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/taskList"
+                >Danh sách task</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Nhân viên
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/nvThem"
+                >Thêm nhân viên</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/nvList"
+                >Danh sách nhân viên</a
+              >
+            </li>
+          </ul>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -38,11 +107,19 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a class="dropdown-item" href="#">Đăng nhập</a>
+              <a class="dropdown-item" href="#" routerLink="/dangNhap"
+                >Đăng nhập</a
+              >
             </li>
-            <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/dangKy">Đăng ký</a>
+            </li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Quên mật khẩu</a></li>
+            <li>
+              <a class="dropdown-item" href="#" routerLink="/quenMatKhau"
+                >Quên mật khẩu</a
+              >
+            </li>
           </ul>
         </li>
       </ul>

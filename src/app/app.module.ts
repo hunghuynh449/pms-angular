@@ -8,6 +8,16 @@ import { MainComponent } from './main/main.component';
 import { LeaderComponent } from './leader/leader.component';
 import { ListMemberComponent } from './list-member/list-member.component';
 import { InfoProjectComponent } from './info-project/info-project.component';
+import { DuanThemComponent } from './duAn/duan-them/duan-them.component';
+import { DuanSuaComponent } from './duAn/duan-sua/duan-sua.component';
+import { TaskListComponent } from './task/task-list/task-list.component';
+import { TaskThemComponent } from './task/task-them/task-them.component';
+import { TaskSuaComponent } from './task/task-sua/task-sua.component';
+import { NvListComponent } from './nhanVien/nv-list/nv-list.component';
+import { NvThemComponent } from './nhanVien/nv-them/nv-them.component';
+import { NvSuaComponent } from './nhanVien/nv-sua/nv-sua.component';
+import { DuanListComponent } from './duAn/duan-list/duan-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +26,19 @@ import { InfoProjectComponent } from './info-project/info-project.component';
     MainComponent,
     LeaderComponent,
     ListMemberComponent,
-    InfoProjectComponent
+    InfoProjectComponent,
+    DuanListComponent,
+    DuanThemComponent,
+    DuanSuaComponent,
+    TaskListComponent,
+    TaskThemComponent,
+    TaskSuaComponent,
+    NvListComponent,
+    NvThemComponent,
+    NvSuaComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

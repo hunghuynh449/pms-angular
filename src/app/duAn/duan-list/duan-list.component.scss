@@ -1,0 +1,22 @@
+.sp {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+  .card {
+    width: calc((100% - 10px) / 2);
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.32), inset 0 0 10px rgba(0, 0, 0, 0.1);
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  .fit-height {
+    height: fit-content;
+  }
+}
