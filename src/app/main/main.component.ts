@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnChanges {
+  constructor() {}
+  team: any = 10;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnChanges(): void {
+    console.log(123);
   }
 
+  dataTeam($event: any) {
+    this.team = $event;
+    console.log($event);
+  }
 }

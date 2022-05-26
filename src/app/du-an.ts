@@ -1,4 +1,4 @@
-export interface DuAN {
+export interface DuAn {
   id: number;
   tenDuAn: string;
   ngayStart: string;

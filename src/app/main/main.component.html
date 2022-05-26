@@ -2,22 +2,8 @@
   <app-leader class="leader"></app-leader>
   <div class="info-project">
     <main class="main_container">
-      <!-- <div class="btn_find">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Dự án</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>2022</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div> -->
-      <router-outlet></router-outlet>
+      <router-outlet (teamOut)="dataTeam($event)"> </router-outlet>
     </main>
   </div>
-  <app-list-member class="list-member"></app-list-member>
+  <app-list-member class="list-member" [team]="team"></app-list-member>
 </div>

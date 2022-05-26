@@ -4,14 +4,24 @@
     Tên dự án <input class="form-control" placeholder="Nhập tên dự án" />
   </p>
   <p class="mb-3">Ngày bắt đầu <input type="date" class="form-control" /></p>
-  <p class="mb-3">Tiền <input class="form-control" /></p>
+  <p class="mb-3">
+    Tiền <input class="form-control" placeholder="Nhập số tiền" />
+  </p>
   <p class="mb-3">
     Leader
-    <select class="form-control"></select>
+    <select multiple size="2" class="form-control">
+      <option *ngFor="let leader of listLeader" value="{{ leader.id }}">
+        {{ leader.ho + " " + leader.ten }}
+      </option>
+    </select>
   </p>
   <p class="mb-3">
     Thành viên
-    <select multiple size="5" class="form-control"></select>
+    <select multiple size="5" class="form-control">
+      <option *ngFor="let nv of listNhanVien" value="{{ nv.id }}">
+        {{ nv.ho + " " + nv.ten }}
+      </option>
+    </select>
   </p>
   <p><button class="btn btn-primary p-2">Thêm dự án</button></p>
 </form>

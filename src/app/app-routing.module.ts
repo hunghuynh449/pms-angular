@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DuanChiTietComponent } from './duAn/duan-chi-tiet/duan-chi-tiet.component';
 import { DuanListComponent } from './duAn/duan-list/duan-list.component';
 import { DuanSuaComponent } from './duAn/duan-sua/duan-sua.component';
 import { DuanThemComponent } from './duAn/duan-them/duan-them.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'duanList', component: DuanListComponent },
   { path: 'duanThem', component: DuanThemComponent },
   { path: 'duanSua/:id', component: DuanSuaComponent },
+  { path: 'duan/:id', component: DuanChiTietComponent },
   { path: 'taskList', component: TaskListComponent },
   { path: 'taskThem', component: TaskThemComponent },
   { path: 'taskSua/:id', component: TaskSuaComponent },
@@ -23,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

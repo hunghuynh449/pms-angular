@@ -3,11 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { LeaderComponent } from './leader/leader.component';
 import { ListMemberComponent } from './list-member/list-member.component';
-import { InfoProjectComponent } from './info-project/info-project.component';
 import { DuanThemComponent } from './duAn/duan-them/duan-them.component';
 import { DuanSuaComponent } from './duAn/duan-sua/duan-sua.component';
 import { TaskListComponent } from './task/task-list/task-list.component';
@@ -18,15 +16,14 @@ import { NvThemComponent } from './nhanVien/nv-them/nv-them.component';
 import { NvSuaComponent } from './nhanVien/nv-sua/nv-sua.component';
 import { DuanListComponent } from './duAn/duan-list/duan-list.component';
 import { FormsModule } from '@angular/forms';
+import { DuanChiTietComponent } from './duAn/duan-chi-tiet/duan-chi-tiet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     MainComponent,
     LeaderComponent,
     ListMemberComponent,
-    InfoProjectComponent,
     DuanListComponent,
     DuanThemComponent,
     DuanSuaComponent,
@@ -36,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     NvListComponent,
     NvThemComponent,
     NvSuaComponent,
+    DuanChiTietComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

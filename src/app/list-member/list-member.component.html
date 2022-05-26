@@ -10,17 +10,15 @@
       aria-expanded="false"
       aria-controls="collapseExample"
     >
-      East
+      Bắc
     </a>
   </div>
   <div class="collapse" id="collapseExample">
     <div class="card card-body">
       <ul class="list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
+        <li class="list-group-item" *ngFor="let north of team.memberNorth">
+          {{ north.ten }}
+        </li>
       </ul>
     </div>
   </div>
@@ -33,17 +31,15 @@
       aria-expanded="false"
       aria-controls="collapseExample"
     >
-      West
+      Trung
     </a>
   </div>
   <div class="collapse" id="collapseExample2">
     <div class="card card-body">
       <ul class="list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
+        <li class="list-group-item" *ngFor="let central of team.memberCentral">
+          {{ central.ten }}
+        </li>
       </ul>
     </div>
   </div>
@@ -56,40 +52,15 @@
       aria-expanded="false"
       aria-controls="collapseExample"
     >
-      South
+      Nam
     </a>
   </div>
   <div class="collapse" id="collapseExample3">
     <div class="card card-body">
       <ul class="list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-      </ul>
-    </div>
-  </div>
-  <div class="list-group list-group-flush">
-    <a
-      class="btn btn-primary list-group-item customBtnCollapse"
-      data-bs-toggle="collapse"
-      href="#collapseExample4"
-      role="button"
-      aria-expanded="false"
-      aria-controls="collapseExample"
-    >
-      North
-    </a>
-  </div>
-  <div class="collapse" id="collapseExample4">
-    <div class="card card-body">
-      <ul class="list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
+        <li class="list-group-item" *ngFor="let south of team.memberSouth">
+          {{ south.ten }}
+        </li>
       </ul>
     </div>
   </div>
