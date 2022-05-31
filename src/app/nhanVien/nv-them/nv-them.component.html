@@ -1,1 +1,103 @@
-<p>nv-them works!</p>
+<form #frm1="ngForm" (ngSubmit)="xuly(frm1.value)">
+  <h5 class="bg-warning p-2">THÊM NHÂN VIÊN</h5>
+  <p class="mb-3">
+    Ảnh đại diện
+    <input
+      name="staffAvatar"
+      [(ngModel)]="staffAvatar"
+      class="form-control"
+      placeholder="Nhập url hình ảnh"
+    />
+  </p>
+  <p class="mb-3">
+    Họ
+    <input
+      name="staffFirstName"
+      [(ngModel)]="staffFirstName"
+      class="form-control"
+      placeholder="Nhập họ nhân viên"
+      required
+      minlength="2"
+      #errFirstName="ngModel"
+    />
+  </p>
+  <p class="mb-3">
+    Tên
+    <input
+      name="staffLastName"
+      [(ngModel)]="staffLastName"
+      class="form-control"
+      placeholder="Nhập tên nhân viên"
+      required
+      #errLastName="ngModel"
+    />
+  </p>
+  <p class="mb-3">
+    Ngày Sinh
+    <input
+      name="staffBirth"
+      [(ngModel)]="staffBirth"
+      type="date"
+      class="form-control"
+      required
+      #errBirth="ngModel"
+    />
+  </p>
+  <p class="mb-3">
+    Giới tính
+
+    <select
+      name="staffGender"
+      [(ngModel)]="staffGender"
+      class="form-control"
+      required
+      size="2"
+      #errGender="ngModel"
+    >
+      <option value="true">Nam</option>
+      <option value="false">Nữ</option>
+    </select>
+  </p>
+  <p class="mb-3">
+    Khu Vực
+
+    <select
+      name="staffArea"
+      [(ngModel)]="staffArea"
+      class="form-control"
+      required
+      size="3"
+      #errArea="ngModel"
+    >
+      <option value="Bắc">Bắc</option>
+      <option value="Trung">Trung</option>
+      <option value="Nam">Nam</option>
+    </select>
+  </p>
+  <p>
+    <button type="submit" class="btn btn-primary p-2">Thêm nhân viên</button>
+  </p>
+</form>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div
+    id="liveToast"
+    class="toast"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="..." />
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="toast-body">Hello, world! This is a toast message.</div>
+  </div>
+</div>

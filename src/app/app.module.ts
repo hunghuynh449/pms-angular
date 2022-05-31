@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,8 +15,16 @@ import { NvListComponent } from './nhanVien/nv-list/nv-list.component';
 import { NvThemComponent } from './nhanVien/nv-them/nv-them.component';
 import { NvSuaComponent } from './nhanVien/nv-sua/nv-sua.component';
 import { DuanListComponent } from './duAn/duan-list/duan-list.component';
-import { FormsModule } from '@angular/forms';
 import { DuanChiTietComponent } from './duAn/duan-chi-tiet/duan-chi-tiet.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastGlobalComponent } from './toast/toast-global/toast-global.component';
+import { ToastContainerComponent } from './toast/toast-container/toast-container.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -34,8 +42,18 @@ import { DuanChiTietComponent } from './duAn/duan-chi-tiet/duan-chi-tiet.compone
     NvThemComponent,
     NvSuaComponent,
     DuanChiTietComponent,
+    ToastGlobalComponent,
+    ToastContainerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent],
 })
