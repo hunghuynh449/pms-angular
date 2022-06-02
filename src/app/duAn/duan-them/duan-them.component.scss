@@ -1,0 +1,19 @@
+// input[name="projectName"].ng-invalid {
+//   background-color: rgb(255, 255, 123);
+// }
+
+.border-tooltip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+  border-radius: 50%;
+  //   display: inline-block;
+  a {
+    text-decoration: none;
+    color: #fff;
+    cursor: default;
+  }
+}
