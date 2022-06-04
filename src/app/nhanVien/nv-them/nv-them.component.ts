@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NhanVien } from 'src/app/nhan-vien';
+import { DuAnService } from 'src/app/service/du-an.service';
 import { NhanVienService } from 'src/app/service/nhan-vien.service';
 
 @Component({
@@ -16,13 +18,17 @@ export class NvThemComponent implements OnInit {
   staffGender: any;
   staffArea: any;
 
-  ngOnInit(): void {}
+  allNhanVien: any;
+
+  ngOnInit() {
+    this.NhanVienService.getData().subscribe((data: any) => {
+      this.allNhanVien = data;
+    });
+  }
 
   xuly(data: any) {
-    console.log(data);
-    let allNhanVien = this.NhanVienService.getAll();
     data = {
-      id: allNhanVien[allNhanVien.length - 1].id + 1,
+      id: parseInt(this.allNhanVien[this.allNhanVien.length - 1].id) + 1,
       avt: this.staffAvatar,
       ho: this.staffFirstName,
       ten: this.staffLastName,
@@ -31,5 +37,6 @@ export class NvThemComponent implements OnInit {
       khuvuc: this.staffArea,
     };
     this.NhanVienService.addItem(data);
+    alert('Thêm nhân viên thành công');
   }
 }

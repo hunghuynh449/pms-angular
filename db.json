@@ -1,0 +1,331 @@
+{
+  "task": [
+    {
+      "id": 1,
+      "tenTask": "Trồng cây số lượng lớn",
+      "duAnID": 1,
+      "nhanvienID": 1,
+      "moTa": "Nhân viên kêu gọi hết sức người dân trồng cây xanh, vì một đất nước xanh",
+      "status": 1,
+      "priority": 1
+    },
+    {
+      "id": 2,
+      "tenTask": "Mô hình nuôi heo công nghệ cao",
+      "duAnID": 2,
+      "nhanvienID": 2,
+      "moTa": "Áp dụng mô hình và kỹ thuật nuôi heo công nghệ cao của nước ngoài, heo được ở máy lạnh",
+      "status": 2,
+      "priority": 1
+    },
+    {
+      "id": 3,
+      "tenTask": "Website an toàn",
+      "duAnID": 3,
+      "nhanvienID": 3,
+      "moTa": "Xây dựng bảo mật web an toàn",
+      "status": 1,
+      "priority": 2
+    },
+    {
+      "id": 4,
+      "tenTask": "Thương hiệu coffee lớn nhất VN",
+      "duAnID": 4,
+      "nhanvienID": 6,
+      "moTa": "Xây dựng thương hiệu",
+      "status": 3,
+      "priority": 1
+    },
+    {
+      "id": 5,
+      "tenTask": "Tòa nhà cao nhất VN",
+      "duAnID": 5,
+      "nhanvienID": 3,
+      "moTa": "Xây dựng 1 tòa nhà cao hơn Land Mark",
+      "status": 3,
+      "priority": 1
+    },
+    {
+      "id": 7,
+      "tenTask": "Edit phim",
+      "duAnID": 6,
+      "nhanvienID": 4,
+      "moTa": "Edit áp dụng kỹ xảo điện ảnh công nghệ cao vào phim",
+      "status": 1,
+      "priority": 2
+    },
+    {
+      "id": 9,
+      "tenTask": "Testing Application",
+      "duAnID": "9",
+      "nhanvienID": "4",
+      "moTa": "Test project cuối cùng",
+      "status": "3",
+      "priority": "2"
+    },
+    {
+      "id": "10",
+      "tenTask": "Tạo SmartContract",
+      "duAnID": "7",
+      "nhanvienID": "6",
+      "moTa": "tạo 1 smartcontract cơ bản để chuyển tiền",
+      "status": "1",
+      "priority": "1"
+    }
+  ],
+  "nhanVien": [
+    {
+      "id": "1",
+      "avt": "https://scontent.fsgn5-3.fna.fbcdn.net/v/t39.1997-6/11057094_789355417820039_1724834611_n.png?stp=dst-png_s168x128&_nc_cat=1&ccb=1-7&_nc_sid=0572db&_nc_ohc=ilnA9O-QvHcAX8enSjX&_nc_ht=scontent.fsgn5-3.fna&oh=00_AT9vcfIOunm_y3uON8fMHfbzzbzBK2xdhlfF79hSO-zlqw&oe=629EE455",
+      "ho": "Nguyễn Bá",
+      "ten": "Đạo",
+      "ngaysinh": "2001-1-3",
+      "phai": "true",
+      "khuvuc": "Bắc"
+    },
+    {
+      "id": "2",
+      "avt": "https://scontent.xx.fbcdn.net/v/t39.1997-6/47153064_2150118508374255_6327904776101036032_n.png?stp=dst-png_s168x128&_nc_cat=1&ccb=1-7&_nc_sid=0572db&_nc_ohc=aevb-hQ0FrUAX9mDFa7&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=00_AT-ga6wmkwrzeA8RitPRlT_qEV3MTydW8unFHxUoAq0SgA&oe=629E748D",
+      "ho": "Phạm Kỹ",
+      "ten": "Luật",
+      "ngaysinh": "2001-5-6",
+      "phai": "true",
+      "khuvuc": "Bắc"
+    },
+    {
+      "id": "3",
+      "avt": "https://scontent.xx.fbcdn.net/v/t39.1997-6/16344830_1458999190798524_1851726792633614336_n.png?stp=dst-png_s168x128&_nc_cat=1&ccb=1-7&_nc_sid=0572db&_nc_ohc=ntM_wjkvUzUAX9LUXwS&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=00_AT8R3OAw7lcsAMZdHXeiqHjuuYJSXDroDLcPzQ75ObRA4w&oe=629F7B55",
+      "ho": "Mai Thanh",
+      "ten": "Toán",
+      "ngaysinh": "2002-6-15",
+      "phai": "true",
+      "khuvuc": "Nam"
+    },
+    {
+      "id": "4",
+      "avt": "https://scr.vn/wp-content/uploads/2020/07/H%C3%ACnh-%C4%91%E1%BA%A1i-di%E1%BB%87n-%C4%91%E1%BA%B9p-1.jpg",
+      "ho": "Cao Thị Chót",
+      "ten": "Vót",
+      "ngaysinh": "2002-8-19",
+      "phai": "false",
+      "khuvuc": "Nam"
+    },
+    {
+      "id": "5",
+      "avt": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYUTzPmToeXINLPent4vxqBqEfSgO-k8adI9OkpmfR-2FEajD5tbBpMyHjVPnkQ_gnyeM&usqp=CAU",
+      "ho": "Mai Phạt Sáu",
+      "ten": "Ngàn",
+      "ngaysinh": "2001-2-28",
+      "phai": "false",
+      "khuvuc": "Trung"
+    },
+    {
+      "id": "6",
+      "avt": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYUTzPmToeXINLPent4vxqBqEfSgO-k8adI9OkpmfR-2FEajD5tbBpMyHjVPnkQ_gnyeM&usqp=CAU",
+      "ho": "Đào Anh",
+      "ten": "Tài",
+      "ngaysinh": "1998-5-30",
+      "phai": "true",
+      "khuvuc": "Nam"
+    },
+    {
+      "id": "7",
+      "avt": "https://i.pinimg.com/236x/f5/ae/79/f5ae79e7a568ac8009e9f868e0b96d22.jpg",
+      "ho": "Huỳnh Khánh",
+      "ten": "An",
+      "ngaysinh": "1998-05-31",
+      "phai": "true",
+      "khuvuc": "Nam"
+    },
+    {
+      "id": "8",
+      "avt": "https://i.pinimg.com/236x/92/65/40/926540474bdbca3e01ae4ba47cc4c69c.jpg",
+      "ho": "Nguyễn Thanh",
+      "ten": "Tùng",
+      "ngaysinh": "2002-09-09",
+      "phai": "true",
+      "khuvuc": "Trung"
+    },
+    {
+      "id": "9",
+      "avt": "https://i.pinimg.com/236x/30/fb/f1/30fbf1e627ecc6bde413622a329ba99b.jpg",
+      "ho": "Võ Hoài",
+      "ten": "Trâm",
+      "ngaysinh": "2001-12-12",
+      "phai": "false",
+      "khuvuc": "Bắc"
+    },
+    {
+      "id": "10",
+      "avt": "https://i.pinimg.com/236x/64/6e/17/646e179ffb9aaaff4c674626ee204c0a.jpg",
+      "ho": "Nguyễn Quỳnh",
+      "ten": "Anh",
+      "ngaysinh": "2004-03-26",
+      "phai": "false",
+      "khuvuc": "Nam"
+    },
+    {
+      "id": "11",
+      "avt": "https://i.pinimg.com/236x/6d/28/52/6d2852839dfd82b6fb0dc60af38bdc66.jpg",
+      "ho": "Nguyễn Ngọc",
+      "ten": "Đức",
+      "ngaysinh": "2000-04-24",
+      "phai": "true",
+      "khuvuc": "Trung"
+    }
+  ],
+  "duAn": [
+    {
+      "id": "1",
+      "tenDuAn": "Quản lý trại heo",
+      "ngayStart": "2022-03-01",
+      "tien": "6700000",
+      "leader": "1",
+      "thanhvien": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": "2",
+      "tenDuAn": "Cây xanh công viên",
+      "ngayStart": "2022-03-15",
+      "tien": "5700000",
+      "leader": "1",
+      "thanhvien": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "3",
+      "tenDuAn": "Website Văn hóa Việt",
+      "ngayStart": "2022-03-17",
+      "tien": "9700000",
+      "leader": "2",
+      "thanhvien": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "id": "4",
+      "tenDuAn": "Website Du lịch Bụi",
+      "ngayStart": "2022-03-19",
+      "tien": "7700000",
+      "leader": "2",
+      "thanhvien": [
+        "3",
+        "5"
+      ]
+    },
+    {
+      "id": "5",
+      "tenDuAn": "Quản lý nhà thuốc Vĩnh An",
+      "ngayStart": "2022-03-22",
+      "tien": "97000000",
+      "leader": "3",
+      "thanhvien": [
+        "1",
+        "4"
+      ]
+    },
+    {
+      "id": "6",
+      "tenDuAn": "Chăm sóc thú cưng",
+      "ngayStart": "2022-03-30",
+      "tien": "180000000",
+      "leader": "3",
+      "thanhvien": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "7",
+      "tenDuAn": "Blockchain",
+      "ngayStart": "2022-03-30",
+      "tien": "530000000",
+      "leader": "1",
+      "thanhvien": [
+        "1",
+        "4",
+        "7",
+        "9",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "id": "8",
+      "tenDuAn": "Quản lý nghệ sĩ",
+      "ngayStart": "2022-06-01",
+      "tien": "95000000",
+      "leader": "2",
+      "thanhvien": [
+        "3",
+        "4",
+        "5",
+        "8",
+        "11"
+      ]
+    },
+    {
+      "id": "9",
+      "tenDuAn": "Testing App",
+      "ngayStart": "2022-05-12",
+      "tien": "35000000",
+      "leader": "1",
+      "thanhvien": [
+        "1",
+        "5",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "id": "10",
+      "tenDuAn": "GameFi",
+      "ngayStart": "2022-06-03",
+      "tien": "460000000",
+      "leader": "2",
+      "thanhvien": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  ],
+  "leader": [
+    {
+      "id": 1,
+      "avt": "https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.1997-6/851575_392310047532974_678875671_n.png?stp=dst-png_s168x128&_nc_cat=1&ccb=1-7&_nc_sid=0572db&_nc_ohc=jpx0PpoHg4sAX9rGFaH&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT9wzfkTSHSD_dGZufms4sspKMSN4IU_o8nJ5XDF-2z2zA&oe=628C450D",
+      "ho": "Huỳnh Quốc",
+      "ten": "Hưng",
+      "ngaysinh": "2001-11-15",
+      "phai": true
+    },
+    {
+      "id": 2,
+      "avt": "https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p100x100&_nc_cat=1&ccb=1-7&_nc_sid=7206a8&_nc_ohc=uOuV_ed7AVYAX-USzrQ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT-nfBHko36bekclSjTpQ1pPrPXtncK7FofL76Bh6D9OPA&oe=62AEC878",
+      "ho": "Nguyễn Tấn",
+      "ten": "Tường",
+      "ngaysinh": "1999-5-6",
+      "phai": true
+    },
+    {
+      "id": 3,
+      "avt": "https://scontent.fsgn2-6.fna.fbcdn.net/v/t1.30497-1/143086968_2856368904622192_1959732218791162458_n.png?stp=dst-png_p100x100&_nc_cat=1&ccb=1-7&_nc_sid=7206a8&_nc_ohc=uOuV_ed7AVYAX-USzrQ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT-nfBHko36bekclSjTpQ1pPrPXtncK7FofL76Bh6D9OPA&oe=62AEC878",
+      "ho": "Đặng Trung",
+      "ten": "Kiên",
+      "ngaysinh": "2002-3-6",
+      "phai": true
+    }
+  ]
+}

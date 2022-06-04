@@ -18,7 +18,20 @@
             ><strong> {{ da.tien | currency: "VND":true:"1.0-3" }}</strong>
           </span>
         </p>
-        <button type="button" class="btn btn-outline-warning">Sửa</button>
+        <button
+          type="button"
+          class="btn btn-outline-warning"
+          (click)="editDuAn(da)"
+        >
+          Sửa
+        </button>
+        <button
+          type="button"
+          class="ms-2 btn btn-outline-danger"
+          (click)="deleteDuAn(da.id)"
+        >
+          Xóa
+        </button>
       </div>
     </div>
   </div>

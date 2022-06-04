@@ -24,27 +24,46 @@ export class DuanThemComponent implements OnInit {
 
   listLeader: Leader[] = [];
   listNhanVien: NhanVien[] = [];
-
+  allProject: any;
   ngOnInit(): void {
-    this.listLeader = this.LeaderService.getAll();
-    this.listNhanVien = this.NhanVienService.getAll();
+    this.LeaderService.getData().subscribe(
+      (response: any) => {
+        this.listLeader = response;
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
+    this.NhanVienService.getData().subscribe(
+      (response: any) => {
+        this.listNhanVien = response;
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
+    this.DuAnService.getData().subscribe(
+      (response: any) => {
+        this.allProject = response;
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
   }
 
   xuly(data: any) {
-    console.log('Data: ', data);
-    let allProject = this.DuAnService.getAll();
+    // let allProject = this.DuAnService.getAll();
     data = {
-      id: allProject[allProject.length - 1].id + 1,
+      id: parseInt(this.allProject[this.allProject.length - 1].id) + 1,
       tenDuAn: this.projectName,
-      tien: this.projectPrice,
+      ngayStart: this.projectDate,
+      tien: parseInt(this.projectPrice),
       leader: this.projectLeader,
       thanhvien: this.projectMember,
     };
+    console.log('Data: ', data);
     this.DuAnService.addItem(data);
-    // console.log('projectName=', this.projectName);
-    // console.log('projectDate=', this.projectDate);
-    // console.log('projectPrice=', this.projectPrice);
-    // console.log('projectLeader=', this.projectLeader);
-    // console.log('projectMember=', this.projectMember);
+    alert('Thêm dự án thành công');
   }
 }

@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NhanVien } from '../nhan-vien';
 
@@ -53,32 +54,68 @@ export class NhanVienService {
     },
   ];
 
-  constructor() {}
+  private url = 'http://localhost:3000/nhanVien';
+
+  constructor(private http: HttpClient) {}
 
   getAll() {
     return this.list;
   }
 
+  getData() {
+    return this.http.get(this.url);
+  }
+
   getOne(id: number) {
-    return this.list.find((currentValue) => currentValue.id == id);
+    // return this.list.find((currentValue) => currentValue.id == id);
+    return this.http.get(`${this.url}/${id}`);
   }
 
   addItem(item: NhanVien = <NhanVien>{}) {
-    this.list.push(item);
+    const params = new HttpParams({
+      fromObject: { ...item },
+    });
+
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+    });
+
+    return this.http.post(this.url, params, { headers }).subscribe((data) => {
+      // console.log(data);
+    });
+    // this.list.push(item);
   }
 
   editItem(item: NhanVien = <NhanVien>{}) {
-    let index = this.list.findIndex(
-      (currentValue) => currentValue.id == item.id
-    );
-    this.list[index] = item;
+    const params = new HttpParams({
+      fromObject: { ...item },
+    });
+
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+    });
+
+    return this.http
+      .put(`${this.url}/${item.id}`, params, { headers })
+      .subscribe((data) => {
+        // console.log(data);
+      });
+
+    // let index = this.list.findIndex(
+    //   (currentValue) => currentValue.id == item.id
+    // );
+    // this.list[index] = item;
   }
 
   deleteItem(id: number = 0) {
-    let index = this.list.findIndex((currentValue) => {
-      return currentValue.id == id;
-    });
-    console.log(index);
-    this.list.splice(index, 1);
+    return this.http
+      .delete(`${this.url}/${id}`)
+      .subscribe(() => console.log('Deleted'));
+
+    // let index = this.list.findIndex((currentValue) => {
+    //   return currentValue.id == id;
+    // });
+    // console.log(index);
+    // this.list.splice(index, 1);
   }
 }

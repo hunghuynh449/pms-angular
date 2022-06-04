@@ -23,12 +23,20 @@ export class TaskThemComponent implements OnInit {
 
   listDuAn: DuAn[] = [];
   listNhanVien: NhanVien[] = [];
+  allTask: any;
 
   ngOnInit(): void {
-    this.listDuAn = this.DuAnService.getAll();
-    this.listNhanVien = this.NhanVienService.getAll();
+    this.DuAnService.getData().subscribe((data: any) => {
+      this.listDuAn = data;
+    });
+    this.NhanVienService.getData().subscribe((data: any) => {
+      this.listNhanVien = data;
+    });
+    this.TaskService.getData().subscribe((data: any) => {
+      this.allTask = data;
+    });
     this.frm1 = new FormGroup({
-      taskName: new FormControl('test', [
+      taskName: new FormControl('Dự Án ABC', [
         Validators.minLength(4),
         Validators.required,
       ]),
@@ -36,19 +44,17 @@ export class TaskThemComponent implements OnInit {
         Validators.minLength(10),
         Validators.required,
       ]),
-      taskProject: new FormControl('2', Validators.required),
-      taskOwner: new FormControl('2', Validators.required),
-      taskPriority: new FormControl('2', Validators.required),
+      taskProject: new FormControl('1', Validators.required),
+      taskOwner: new FormControl('1', Validators.required),
+      taskPriority: new FormControl('1', Validators.required),
       taskStatus: new FormControl('1', Validators.required),
     });
     console.log(this.frm1);
   }
 
   xuly(data: any) {
-    console.log(data);
-    let allTask = this.TaskService.getAll();
     data = {
-      id: allTask[allTask.length - 1].id + 1,
+      id: this.allTask[this.allTask.length - 1].id + 1,
       tenTask: data.taskName,
       duAnID: data.taskProject,
       nhanvienID: data.taskOwner,
@@ -57,5 +63,6 @@ export class TaskThemComponent implements OnInit {
       priority: data.taskPriority,
     };
     this.TaskService.addItem(data);
+    alert('Thêm task thành công');
   }
 }

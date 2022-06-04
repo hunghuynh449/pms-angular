@@ -1,0 +1,27 @@
+.task {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .width80 {
+    width: 80%;
+  }
+  .fz9 {
+    font-size: 0.9rem;
+  }
+  .btn-task {
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 100px;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  &:hover .btn-task {
+    right: 0;
+    opacity: 1;
+  }
+}
