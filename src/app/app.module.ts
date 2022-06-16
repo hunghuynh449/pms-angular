@@ -20,6 +20,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './user/register/register.component';
+import { LoginComponent } from './user/login/login.component';
+import { ForgotPassComponent } from './user/forgot-pass/forgot-pass.component';
+import { ChangePassComponent } from './user/change-pass/change-pass.component';
+import { Moment } from 'moment';
 
 @NgModule({
   declarations: [
@@ -37,6 +42,10 @@ import { HttpClientModule } from '@angular/common/http';
     NvThemComponent,
     NvSuaComponent,
     DuanChiTietComponent,
+    RegisterComponent,
+    LoginComponent,
+    ForgotPassComponent,
+    ChangePassComponent,
   ],
   imports: [
     BrowserModule,

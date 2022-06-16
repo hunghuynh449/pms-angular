@@ -11,12 +11,12 @@
     },
     {
       "id": 2,
-      "tenTask": "Mô hình nuôi heo công nghệ cao",
-      "duAnID": 2,
-      "nhanvienID": 2,
+      "tenTask": "Mô hình nuôi heo công nghệ cao 123",
+      "duAnID": "2",
+      "nhanvienID": "2",
       "moTa": "Áp dụng mô hình và kỹ thuật nuôi heo công nghệ cao của nước ngoài, heo được ở máy lạnh",
-      "status": 2,
-      "priority": 1
+      "status": "2",
+      "priority": "1"
     },
     {
       "id": 3,
@@ -46,15 +46,6 @@
       "priority": 1
     },
     {
-      "id": 7,
-      "tenTask": "Edit phim",
-      "duAnID": 6,
-      "nhanvienID": 4,
-      "moTa": "Edit áp dụng kỹ xảo điện ảnh công nghệ cao vào phim",
-      "status": 1,
-      "priority": 2
-    },
-    {
       "id": 9,
       "tenTask": "Testing Application",
       "duAnID": "9",
@@ -62,15 +53,6 @@
       "moTa": "Test project cuối cùng",
       "status": "3",
       "priority": "2"
-    },
-    {
-      "id": "10",
-      "tenTask": "Tạo SmartContract",
-      "duAnID": "7",
-      "nhanvienID": "6",
-      "moTa": "tạo 1 smartcontract cơ bản để chuyển tiền",
-      "status": "1",
-      "priority": "1"
     }
   ],
   "nhanVien": [
@@ -300,6 +282,21 @@
         "9",
         "10"
       ]
+    },
+    {
+      "id": "11",
+      "tenDuAn": "14444444444",
+      "ngayStart": "2022-06-09",
+      "tien": "22222222",
+      "leader": "1",
+      "thanhvien": [
+        "1",
+        "4",
+        "5",
+        "7",
+        "8",
+        "10"
+      ]
     }
   ],
   "leader": [
@@ -326,6 +323,32 @@
       "ten": "Kiên",
       "ngaysinh": "2002-3-6",
       "phai": true
+    }
+  ],
+  "taiKhoan": [
+    {
+      "id": "1",
+      "email": "hunghuynh449@gmail.com",
+      "userName": "hunghuynh449",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "email": "admin@gmail.com",
+      "userName": "admin",
+      "password": "123"
+    },
+    {
+      "id": "3",
+      "email": "nhanvien@gmail.com",
+      "userName": "nhanvien",
+      "password": "123"
+    },
+    {
+      "userName": "lam1",
+      "password": "321",
+      "email": "lam1@gmail.com",
+      "id": "LfOlniZ"
     }
   ]
 }

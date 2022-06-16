@@ -57,7 +57,7 @@ export class DuAnService {
     },
   ];
 
-  private url = 'http://localhost:3000/duAn';
+  private url = 'http://localhost:5000/duAn';
 
   constructor(private http: HttpClient) {}
 

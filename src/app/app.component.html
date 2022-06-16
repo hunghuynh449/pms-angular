@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Quản lý dự án FPoly</a>
+    <a class="navbar-brand" href="">Quản lý dự án FPoly</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -18,9 +18,6 @@
           <a class="nav-link active" aria-current="page" href="#"
             >Bảng điều khiển</a
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Giới thiệu</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -106,24 +103,33 @@
             Tài khoản
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <a class="dropdown-item" href="#" routerLink="/dangNhap"
+            <li *ngIf="!daDangNhap()">
+              <a class="dropdown-item" href="/dangNhap" routerLink="/dangNhap"
                 >Đăng nhập</a
               >
             </li>
-            <li>
+            <li *ngIf="!daDangNhap()">
               <a class="dropdown-item" href="#" routerLink="/dangKy">Đăng ký</a>
             </li>
-            <li><hr class="dropdown-divider" /></li>
+            <li *ngIf="!daDangNhap()"><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item" href="#" routerLink="/quenMatKhau"
                 >Quên mật khẩu</a
               >
             </li>
+            <li *ngIf="daDangNhap()">
+              <a class="dropdown-item" href="#" routerLink="/doiMatKhau"
+                >Đổi mật khẩu</a
+              >
+            </li>
+            <li *ngIf="daDangNhap()"><hr class="dropdown-divider" /></li>
+            <li *ngIf="daDangNhap()">
+              <a class="dropdown-item" href="#" (click)="thoat()">Đăng xuất</a>
+            </li>
           </ul>
         </li>
       </ul>
-      <form class="d-flex" ngClass="float-end">
+      <form class="d-flex" *ngIf="daDangNhap()">
         <input
           class="form-control me-2"
           type="text"
@@ -135,14 +141,33 @@
   </div>
 </nav>
 
-<div style="width: 100%; text-align: right">2/3/2021</div>
+<!-- <div style="width: 100%; text-align: right">2/3/2021</div> -->
+<!-- <p>Tình trạng đăng nhập: {{ daDangNhap() }}</p> -->
 <div class="main mt-3">
-  <app-leader class="leader"></app-leader>
-  <div class="info-project">
+  <app-leader class="leader" *ngIf="daDangNhap()"></app-leader>
+  <div class="col-md-12 info-project">
     <main class="main_container">
+      <div *ngIf="!daDangNhap()">
+        <h2>Chào mừng đến với trang quản lý dự án</h2>
+        <div class="dflex">
+          <img
+            width="80%"
+            height="80%"
+            src="https://global-uploads.webflow.com/5e3ce2ec7f6e53c045fe7cfa/603ddbb15326d80fbe9c2226_Frame-154.png"
+            alt=""
+          />
+          <router-outlet (activate)="dataTeam($event)"> </router-outlet>
+        </div>
+      </div>
+      <div *ngIf="daDangNhap()">
+        <router-outlet (activate)="dataTeam($event)"> </router-outlet>
+      </div>
       <!-- <app-duan-chi-tiet (teamOut)="dataTeam($event)"></app-duan-chi-tiet> -->
-      <router-outlet (activate)="dataTeam($event)"> </router-outlet>
     </main>
   </div>
-  <app-list-member class="list-member" [team]="team"></app-list-member>
+  <app-list-member
+    class="list-member"
+    [team]="team"
+    *ngIf="daDangNhap()"
+  ></app-list-member>
 </div>

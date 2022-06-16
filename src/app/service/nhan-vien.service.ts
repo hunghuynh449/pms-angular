@@ -54,7 +54,7 @@ export class NhanVienService {
     },
   ];
 
-  private url = 'http://localhost:3000/nhanVien';
+  private url = 'http://localhost:5000/nhanVien';
 
   constructor(private http: HttpClient) {}
 

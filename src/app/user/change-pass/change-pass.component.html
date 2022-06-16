@@ -1,0 +1,64 @@
+<div class="login-page">
+  <div class="form">
+    <form #frm1="ngForm" class="login-form" (ngSubmit)="xulyDN(frm1.value)">
+      <h4>Đổi mật khẩu</h4>
+      <input
+        type="text"
+        name="userName"
+        [(ngModel)]="userName"
+        required
+        minlength="4"
+        #errName="ngModel"
+        placeholder="Tên đăng nhập"
+      />
+      <div *ngIf="errName.invalid && (errName.dirty || errName.touched)">
+        <p *ngIf="errName.errors?.['required']" class="text-danger">
+          Chưa nhập tên đăng nhập.
+        </p>
+        <p
+          *ngIf="errName.errors?.['minlength']?.actualLength<errName.errors?.['minlength']?.requiredLength"
+          class="text-danger"
+        >
+          Tên đăng nhập tối thiểu 4 ký tự.
+        </p>
+      </div>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+        minlength="3"
+        #errPass="ngModel"
+        placeholder="Mật khẩu"
+      />
+      <div *ngIf="errPass.invalid && (errPass.dirty || errPass.touched)">
+        <p *ngIf="errPass.errors?.['required']" class="text-danger">
+          Chưa nhập mật khẩu mới.
+        </p>
+        <p
+          *ngIf="errPass.errors?.['minlength']?.actualLength<errPass.errors?.['minlength']?.requiredLength"
+          class="text-danger"
+        >
+          Mật khẩu tối thiểu 3 ký tự.
+        </p>
+      </div>
+      <input
+        type="password"
+        name="password2"
+        [(ngModel)]="password2"
+        required
+        #errPass2="ngModel"
+        placeholder="Nhập lại mật khẩu"
+        (keyup)="checkPass()"
+      />
+      <div *ngIf="errPass2.invalid && (errPass2.dirty || errPass2.touched)">
+        <p *ngIf="errPass2.errors?.['required']" class="text-danger">
+          Chưa nhập lại mật khẩu.
+        </p>
+      </div>
+      <p class="error" *ngIf="wrongPass">Mật khẩu không khớp</p>
+      <p class="success" *ngIf="truePass">Khớp mật khẩu</p>
+      <button type="submit">Đổi mật khẩu</button>
+    </form>
+  </div>
+</div>

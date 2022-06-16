@@ -62,7 +62,7 @@ export class DuanThemComponent implements OnInit {
       leader: this.projectLeader,
       thanhvien: this.projectMember,
     };
-    console.log('Data: ', data);
+    console.log(data);
     this.DuAnService.addItem(data);
     alert('Thêm dự án thành công');
   }

@@ -1,0 +1,32 @@
+<div class="login-page">
+  <div class="form">
+    <form #frm1="ngForm" class="login-form" (ngSubmit)="xulyDN(frm1.value)">
+      <h4>Đăng nhập</h4>
+      <input
+        type="text"
+        name="un"
+        ngModel
+        required
+        minlength="4"
+        #errName="ngModel"
+        placeholder="Tên đăng nhập"
+      />
+      <div *ngIf="errName.invalid && (errName.dirty || errName.touched)">
+        <p *ngIf="errName.errors?.['required']" class="text-danger">
+          Chưa nhập tên đăng nhập.
+        </p>
+        <p
+          *ngIf="errName.errors?.['minlength']?.actualLength<errName.errors?.['minlength']?.requiredLength"
+          class="text-danger"
+        >
+          Tên đăng nhập tối thiểu 4 ký tự.
+        </p>
+      </div>
+      <input type="password" name="pw" ngModel placeholder="Mật khẩu" />
+      <button type="submit">Đăng nhập</button>
+      <p class="message">
+        Chưa có tài khoản? <a href="#" routerLink="/dangKy">Tạo tài khoản</a>
+      </p>
+    </form>
+  </div>
+</div>

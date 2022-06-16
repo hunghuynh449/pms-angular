@@ -1,0 +1,64 @@
+<div class="login-page">
+  <div class="form">
+    <form #frm1="ngForm" class="register-form" (ngSubmit)="xulyDN(frm1.value)">
+      <h4>Đăng ký</h4>
+      <input
+        type="text"
+        name="userName"
+        ngModel
+        required
+        minlength="4"
+        #errName="ngModel"
+        placeholder="Tên đăng nhập"
+      />
+      <div *ngIf="errName.invalid && (errName.dirty || errName.touched)">
+        <p *ngIf="errName.errors?.['required']" class="text-danger">
+          Chưa nhập tên đăng nhập.
+        </p>
+        <p
+          *ngIf="errName.errors?.['minlength']?.actualLength<errName.errors?.['minlength']?.requiredLength"
+          class="text-danger"
+        >
+          Tên đăng nhập tối thiểu 4 ký tự.
+        </p>
+      </div>
+      <input
+        type="password"
+        name="password"
+        required
+        ngModel
+        minlength="3"
+        #errPass="ngModel"
+        placeholder="Mật khẩu"
+      />
+      <div *ngIf="errPass.invalid && (errPass.dirty || errPass.touched)">
+        <p *ngIf="errPass.errors?.['required']" class="text-danger">
+          Chưa nhập mật khẩu.
+        </p>
+        <p
+          *ngIf="errPass.errors?.['minlength']?.actualLength<errPass.errors?.['minlength']?.requiredLength"
+          class="text-danger"
+        >
+          Mật khẩu tối thiểu 3 ký tự.
+        </p>
+      </div>
+      <input
+        type="text"
+        name="email"
+        ngModel
+        required
+        #errEmail="ngModel"
+        placeholder="Địa chỉ email"
+      />
+      <div *ngIf="errEmail.invalid && (errEmail.dirty || errEmail.touched)">
+        <p *ngIf="errEmail.errors?.['required']" class="text-danger">
+          Chưa nhập email.
+        </p>
+      </div>
+      <button>Tạo</button>
+      <p class="message">
+        Đã có tài khoản? <a href="#" routerLink="/dangNhap">Đăng nhập</a>
+      </p>
+    </form>
+  </div>
+</div>
